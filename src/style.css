@@ -1,1 +1,33 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#card {
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  #topLeft {
+    position: absolute;
+    margin-left: 5%; 
+    font-size:400%;
+  }
+
+  #bottomRight {
+    position: absolute;
+    margin-right: 5%;
+    bottom: 3%;
+    right: 5%;
+    font-size:400%;
+  }
+
+  #center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size:600%;
+    font-family: Arial, sans-serif;
+  }
