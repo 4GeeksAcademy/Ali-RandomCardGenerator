@@ -17,15 +17,19 @@ function newCard() {
   let indexSuits = Math.floor(Math.random() * suits.length);
   let indexNumbers = Math.floor(Math.random() * numbers.length);
 
-  document.querySelector('#top').innerHTML = suits[indexSuits]
-  document.querySelector('#number').innerHTML = numbers[indexNumbers]
-  document.querySelector('#end').innerHTML = suits[indexSuits]
+  let suit = suits[indexSuits];
+  let number = numbers[indexNumbers];
 
-  // Cuando suits sea '♦' o '♥' cambiar la clase de top y end a text-danger
-  let colorSuit = false ? "text-danger" : "text-dark"
-  document.querySelector('#top').className = colorSuit
-  document.querySelector('#number').className = colorSuit
-  document.querySelector('#end').className = colorSuit
+  document.querySelector('#top').innerHTML = suit;
+  document.querySelector('#number').innerHTML = number;
+  document.querySelector('#end').innerHTML = suit;
 
-  console.log('new card', indexSuits, indexNumbers)
+  // When suit is '♦' or '♥', change the class of top and end to text-danger
+  let isRed = (suit === '♦' || suit === '♥');
+  let colorSuit = isRed ? "text-danger" : "text-dark" 
+  document.querySelector('#top').className = colorSuit;
+  document.querySelector('#number').className = colorSuit;
+  document.querySelector('#end').className = colorSuit;
+
+  console.log('new card', indexSuits, indexNumbers);
 }
